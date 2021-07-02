@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Mi Casa Su Casa - Home</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link href="../CSS/style.css" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </head>
+    
+    <body>
+        <div class="p-3 mb-2 bg-success text-white d-grid gap-2 col-10 mx-auto">
+            <div class="card mb-3 d-grid gap-2 col-10 mx-auto" style="max-width: 540px;">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img class="img-fluid rounded-start" alt="..." src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAwFBMVEUac+j///8YWrwAbecAa+dhhMoKVrsAaucadOoAaOcVcegLb+fz+P4AZuZzo+/T4fqnxfWhwPRtn+/X5fqOtfJlmu74+/4ATrjP3fmHsPF8qfAxfOmXufPD1/jg6/uuyPUZbt9blO1Pe8hMjuwZaNXp8f0ieOk2geq50fcATLgYX8YxgOrF2PhJietWj+wAVcK1xuaGotd7mtSctN8gX742acFEccRtl92QrN2pvuN5oec2etoAVsssbs7F0+xwk9Fg8J5mAAAMcUlEQVR4nO2d23biuBKGbUuNsWQgQAgYA4F0OISEdE8fMj37MPv932rbOTTGSLZKKtnOrPwXvdbkYuwPySVVqarkuP90OXW/gHV9EL5/fRC+f30Qvn99EOIoXAwnu/5lFE273e40ii77u8lwEVbybNuEw+tocIg3jPs+JYRzwtN/CPV9zjbxYRBdDy2/gT3CsNcfxJ2AJkTMYc65kr8msDToxIN+z9542iEMJ9GjE1AuAhOgcho4j9HEDqUFwkV/tfGJIt2RkvibVX+B/zrYhIvZllIOgjuKU7qdYUOiEq5n9wGBjd3ZWJLgfrbGfClEwvmIUDO8V0hKRnO818IiDGexqmFRYOQ0nl0hvRkO4WJKUYYvA0npFOeLxCDsjQK04csw8mDUQ3g7c8LeSNt2lolTBEZTwsXKGt8L48p0rpoRht2OTb5nxk7XbK9jQng1c4hlvlTE6ZvYVQPCeUwr4EtF7w3WR23CsBvg20+ZWKA/VXUJd5VM0KOIs6uUMBwElfKlCgZ6X6MW4SSudgBfROJJVYTTTnVfYFasE1VCuD5UZULP5X+GO1ZgwoeN7TW+SHzzYJtw5tczQ9/E/L5dwm71NjSvoGuRMFzV9wkeRVeg1R9CuN7WsUici2wh9gZAuHDqtDFZcQfgUqkT9li9NiYr5qh7xsqEcwuBCn0xruxtqBLu6jeipwpUd+KKhPOmASYOleIoqhE+NMXGZMXVtjdKhL1GfYNvYlzJ3KgQLgzPImyJEZVFQ4FwXeteu0h8o7D0lxNeHZqxkxGJfC73+8sJR03Yi8pER+aEUePWiRMFpW5/GWHjVvq8Slf+EsJF3QAKKjGoJYTbpprRo/jWhLDbZCvzJlrs9BcSPnTqfnsldQq3b0WE4aaZe5m82KYorFFEOGr+R/giMtAjvG76QnFU0ZIhJwzrfm2Q5PNUTtht7nb0XERuT6WED1bmKOPcjq8ZSM+lZIRX99gvwrhP48Pj6vEQUx8dk21lXoaMsI+71jMSbKe79cvXEq53061pil9eVHaeISFENjOcTvPJzr0udiKOxNhICFHNDCdT0dPDKWouHJlCCBeYZoZsZRGjyT3mDxmInQwx4QpxAhVlGFxhZjzwlTphD9HM+MVO+NTHexQVzhUhIeKGlM4KAV13hvdrcmHQRkSIOIRU8vlnNEV8mmgQRYR4Q8gPpYCue8B7nGgQBYR4hpRxlfPoEG+DIzKnAkK8tdC/UAB03Qs0a8MFH8U5YYj3PJU5mgptnjJ6PmnOCfGMm696iLlD+1EFpvuM8CpGq5q4VwR0XTRHhsVn24szwjnaEJJLZcII7dOnZyfDZ4QDNNtN1Wsnh2g/Kz8LSuUJ13ilPUwZ0HXRMlkYzx8p5gnxPF/xHkoivE3GmSecJzygrb5Sp1ukGdqHeLZE5QgRHUPltSLVDm9z2slN0xwhYnhGHv0SCDGyl587OcItXlwhgBRl9fAIWW6anhIuEKMKdRE6uRyUU8JrTOcekpH9gOnqXxcQYp420ZosTX6ZOiEMY7znOOQ7gPA7ZtAtPnEwTgh7iHPF4X8CCP/EjA77JxbghPAS85ds7wGE+zbik0+3/CeEmGFSp/1FPRl78QWT8DRwmiW82iA+JiH8pUz4C5XQ2WSdxCzhAjX1or3/qUz4E3WWngaksoQXuCdqt+OvioBfx7eoT6bZCFiWEPdcu71sPSkSPrWWqGN4cuadJUTclKZqe+O/lAD/GnuogA7LJoJlCZEzoNp7r6UUER57uJ9h4kGJCXENTaKl17pRILxpeUvkJ3cypiZDiBe1fJPnjf8oBfxj7HnYD8563xlCxHOuF7VvE8Sy3en3BPAWeZKeeMEZwi5+GpvneXfF6/6vOw9/CB2eMaYZws/ohOkgenffCk65v6WA6EPo8M9CQrRw/lGJOU0m6pMsNDx8SqYouiF10uC+iNBOpl5C4LXG34TZJt/GLc/GHE2UyTg9Ei6sJJwtvVfGvKOx+Hb3zIe+UqRibCEgHFrJl22/IHqtu5vvw7cfNhx+v3nl83D3a2/iQwHhxE7W+htiMo7jHz+fbj7dPP38MR6/8lkCzOYsHAnn6Av+m/beb7VSHf/TFqDjzwWEmJHEE7WfFw2R9paeeBJRPBKib2mOai/3Ij5bA+icbGqOhKhhqJza7WV+HPdLxx6gQ2YVE6aMCeTvkdzfJn+w+bhMuO1IiHeWLlEC6SxTWaZLRSIB4bSK+pF2qgqew2sjrEqZ5Kh/KqFoDK1/h1VK+B3ataUVS2hL8dIhBEprZehzW3by3JD9pY+5PQnXQ+Qakt/ixPfjw+Mg6u8mvWGq3mTXjwartHYG2vZbVcI9DXJMPxUjtBMPLneSOwLCxe6yu+3gdVg+SrgvRfYtWDIr76cX5Sds6+vooN/kXCKhbzFBPQCmzuO1er+qcD7Y+Jh2gB6TeWz4+MnkhOC9Qj50Hbxud0IfHy1OQ0mk1904vD4gtSUWx2lwYm2MbqBt/7IarpDsjijWhhIvTfgMu8UPR8T8gxTHSxFi3sSZIdzCMRwYf4+SmLfxuUVnhHRtw2RjWJkoObcw3NSQjW4vY4Euzb5GydmT2ZJPH1Hv3ejFJjMqs+CjnQEH5UVqMIUrgx9ccgZscI7PgrIyQw0ZFF9KzvENcjFyKZ1I6uum1UpzMbTzaQKTRb5Al5qI0nwaXf+ppMmPgTTrS6U5UZqlCMpFeBrS24V0ZHlturmJFi7aetNa64WkuYl6+aWl1dpG0qkvleeX6oXbGNbFTGJp9KoqyBHWyfMGVBlqSeNYsyDPWydXP7B8Q6NGuWBBrr5OvcXGLqCGcSiqt9CYEuc1m9gCG4fCmhl43ROxaklTgctpCuue4FtTUB2llibAfQjLdYo0rT+kam0TDAQtayupPwRv3JpHWFJDCq4DbhxhWR0weJo2jrC0lhu6wDaNsLweH9pToWmE5T0VoH0xmkao0BcD2NvEPiFoPcyG82WEwAy+CvY0EIdHpT8NsMcQ/5dtwj5kJ+mr9BiChdzYv20TQkqERY1aBYRDyMRv/8fezfbPuvovwC4o9voCeYntL5CidA39DSigVe3XBuq51779YTdOcwMoOFHuuQcaxNuWekGzhr7eqROq900EDeLSG/9tD3Dd8tRLhAG9L0GxEc/zrIWEw58t9YIFSP9SiDlNa2F/WIq3rZ9agLKojvgtJH2EAfvvZVonolqXDtLQawFK92RNyyWEa8Ai9FyBd4M+jOv/paV76lXeTHLKLuvnDdidLo+VW1gLR7j469NL6ddS9S2kxyfSnuzqLsZr0U9rfPfj6eYThp5+l34pz1F2D+3JDrkt71jX1ELS78oT5TkaSHs2ye9GGKhvwKWlW4ZSLxAuuMMD534LcemWqSCVXzr3WwDvKLlFZtxD2p3o3VECmqeplniQ+9sl5Mm698xA7wpqO0g1TdDiKP27gtzJ+7jvqbhDY/GdXYj90u2ppHN/yb1reP3SrSmbLatBuG78tV2s7KbOsvsPMVs2WlFpA8oyQnfW7Ju7ytM+SwndQZOtjULSYDmhu2puYSJZlb++AmHY2Iss+VYhHK1AmDj8zTSoTObWgwndhdNERKaW9qlE6PaaOE/VLh5XJEw8/qaNIpN79VqEzbv5uPSmYyihO2/UFfKMn53XGxO6D1bLy2FiXL1ZuDqh2yNNsTecAPq9AwjdxaYZuxuygRwFQQjd9ecm7FHpAVQlByJ0r0b1m9RgBDs7gBG6blQ3YlAcszAndOdOnfaGO8qrhDahu9jW9zHSLfy4GU6Y+MR1BRk7OoUBOoTublPHTNUspdYidMMabGow0Mu+0iNMh7Ha1V+/Fl6X0L3qBtVNVR50tQ/QtQldd1KZUaVbyN1ReISue+FUMVWpY5SHbETohlOkhjJy8SAyy+80I0zW/xF2i6esGKEj05QyU0KkhjJiETIwT0QyJ0wbygQW/H/GAwQ+HMJkrk4p6l33aTcmOsVJecQhTJbHWYzXWY5xGs+wMsiwCBM9DDiK1Un+LwPIrXQlQiR03fXFITDtf0SDwwVqLx9UwkTr/oFojySn5NBHxXPxCd10JEexD448curHI3CnPgVZIEwU9mYrJ1A1PYlhCZzVrGenNsUOYaqrYX8QdwKatigVkyZ/54QGnXjQH9or2rBH+KLhLhptNw7xfUoJ4Zzw9B9Cqe8TZ7MdRTvLXSesE75oPZzMr/uXUTTtdrvTKLrsX88nQwsfnUDVENapD8L3rw/C968PwvevD8L3r/8DDZ/uPvH/nG8AAAAASUVORK5CYII=" >
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body"><br><br>
+                        <form>
+                            <div class="d-grid gap-2 col-10 mx-auto">
+                              <input placeholder="Adicionar novo contato" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"><br>
+                            </div>
+                        </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            <div class="d-grid gap-2 col-5 mx-auto">
+                <ol class="list-group list-group-numbered">
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                      <div class="ms-2 me-auto">
+                        <div class="fw-bold">Luisinho</div>
+                        (11) 99999 - 9999 
+                      </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                      <div class="ms-2 me-auto">
+                        <div class="fw-bold">Zezinho</div>
+                        (12) 99999 - 9999 
+                      </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                      <div class="ms-2 me-auto">
+                        <div class="fw-bold">Huguinho</div>
+                        (13) 99999 - 9999 
+                      </div>
+                    </li>
+                  </ol>
+            </div><br>
+            <div class="d-grid gap-2 col-3 mx-auto">
+              <button class="btn btn-info text-white" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z"/>
+                  <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z"/>
+                </svg><a class="text-white" href="home.html">Voltar para home</a></button>
+          </div><br>
+        </div>
+    </body>
+
+</html>
