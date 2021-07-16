@@ -1,89 +1,84 @@
 <!DOCTYPE html>
+
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/8.7.1/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/8.7.1/firebase-auth.js"></script>
-    <script defer src="/__/firebase/8.7.1/firebase-database.js"></script>
-    <script defer src="/__/firebase/8.7.1/firebase-firestore.js"></script>
-    <script defer src="/__/firebase/8.7.1/firebase-functions.js"></script>
-    <script defer src="/__/firebase/8.7.1/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/8.7.1/firebase-storage.js"></script>
-    <script defer src="/__/firebase/8.7.1/firebase-analytics.js"></script>
-    <script defer src="/__/firebase/8.7.1/firebase-remote-config.js"></script>
-    <script defer src="/__/firebase/8.7.1/firebase-performance.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+<head>
+    <meta charset="utf-8" />
+    <title>Mi Casa Su Casa - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="CSS/style.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</head>
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+<body>
+    <nav class="navbar navbar-dark fixed-top bg-green">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                Mi Casa Su Casa
+            </a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row" style="min-height: 100vh;">
+            <div class="col-6 d-flex flex-column align-items-center justify-content-center">
+                <img class="" src="imgs/logo-texto.png" />
+            </div>
+            <div class="col-6 d-flex flex-column justify-content-around align-items-stretch">
+                <div class="list-group shadow">
+                    <p class="d-flex justify-content-center list-group-item list-group-item-action active m-0 h4 bg-green border-green"
+                        aria-current="true">
+                        <strong>Senha atual</strong>
+                    </p>
+                    <div class="list-group-item text-center py-4 d-flex align-items-center justify-content-center"
+                        style="min-height: 105px;" id="spinPass">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+                    <p class="display-5 list-group-item list-group-item-action mb-0 py-4 text-center d-none"
+                        id="txtPass">
+                    </p>
+                    <div class="progress rounded-bottom" style="border-radius: 0">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25"
+                            aria-valuemin="0" aria-valuemax="30" id="progTimer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
 
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
+        var firebaseConfig = {
+            apiKey: "AIzaSyBOneWagWEe-JLdeFuAKjsafHx3WRJNgs0",
+            authDomain: "projeto-pcs.firebaseapp.com",
+            databaseURL: "https://projeto-pcs-default-rtdb.firebaseio.com",
+            projectId: "projeto-pcs",
+            storageBucket: "projeto-pcs.appspot.com",
+            messagingSenderId: "415874711827",
+            appId: "1:415874711827:web:c0d4a878d793af7f685ae6",
+            measurementId: "G-P51H8B053M"
+        };
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        var starCountRef = firebase.database().ref('portas/-MefAucAJHPw7IHZ4ga8');
+        $('#progTimer').css('width', "0%");
+        starCountRef.on('value', (snapshot) => {
+            const data = snapshot.val();
+            $('#progTimer').css('width', `${data.timer * 100 / 30}%`);
+            $('#txtPass').removeClass('d-none').text(data.senha);
+            $('#spinPass').addClass('d-none');
+        });
     </script>
-  </body>
+</body>
+
 </html>
