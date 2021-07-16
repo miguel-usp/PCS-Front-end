@@ -1,20 +1,7 @@
-body {
-    min-height: 100vh;
+.bg-green {
+    background-color: #33ca7f !important;
 }
 
-.center{
-    text-align: center;
-    align-items: center;
-    align-content: center;
-    -moz-box-align: center;
-}
-.imglogo{
-    height: 55px;
-    width: auto;
-}
-.corAzul{
-    background-color: #0CA4A5;
-}
-.verde{
-    background-color: #33CA7F;
+.border-green {
+    border: 1px solid #33ca7f !important;
 }
