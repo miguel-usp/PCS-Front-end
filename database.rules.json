@@ -1,53 +1,52 @@
 {
-  "rules": {
-    "Usuarios": {
-      "$uid": {
-        ".write": "auth != null && $uid === auth.uid",
-        ".read": "auth != null && $uid === auth.uid"
-      }
-    },
-    "Histórico": {
-      "${subHistórico}": {
-         "$uid":{
-        		".write": false,
-        		".read": "auth != null && $uid === auth.uid"
-         }
-      }
-    },
-    "contato": {
-      "${subcontato}": {
-           "$uid":{
-        			".write": "auth != null && $uid === auth.uid",
-        			".read": "auth != null && $uid === auth.uid"
-           }
-      }
-    },
-    "casa": {
-      "${subcasa}": {
-        "$uid": {
-             ".write": "auth != null && $uid === auth.uid",
-             ".read": "auth != null && $uid === auth.uid"
+    "rules": {
+        "Usuarios": {
+            "$uid": {
+                ".write": "auth != null && $uid === auth.uid",
+                ".read": "auth != null && $uid === auth.uid"
+            }
+        },
+        "Histórico": {
+            "${subHistórico}": {
+                "$uid": {
+                    ".write": false,
+                    ".read": "auth != null && $uid === auth.uid"
+                }
+            }
+        },
+        "contato": {
+            "${subcontato}": {
+                "$uid": {
+                    ".write": "auth != null && $uid === auth.uid",
+                    ".read": "auth != null && $uid === auth.uid"
+                }
+            }
+        },
+        "casa": {
+            "${subcasa}": {
+                "$uid": {
+                    ".write": "auth != null && $uid === auth.uid",
+                    ".read": "auth != null && $uid === auth.uid"
+                }
+            }
+        },
+        "Acesso": {
+            "${subacesso}": {
+                "id_porta": {
+                    "id_casa": {
+                        "${subcasa}": {
+                            "$uid": {
+                                ".write": "auth != null && $uid === auth.uid",
+                                ".read": "auth != null && $uid === auth.uid"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "portas": {
+            ".write": true,
+            ".read": true
         }
-      }
-    },
-    "Acesso":{
-      "${subacesso}":{
-         "id_porta":{
-           "id_casa":{
-           		"${subcasa}":{
-                   "$uid":{
-                     ".write": "auth != null && $uid === auth.uid",
-                     ".read": "auth != null && $uid === auth.uid"
-                   }
-                }    
-             }
-           }
-         }
-      },
-    "portas":{
-      ".write": true,
-  		".read": true
-    },
-  }
+    }
 }
-
